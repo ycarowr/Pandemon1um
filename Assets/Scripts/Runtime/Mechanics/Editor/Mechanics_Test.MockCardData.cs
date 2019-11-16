@@ -9,10 +9,10 @@ namespace HexCardGame.Runtime.Test
         public class MockCardData : ICardData
         {
             public CardId Id { get; }
-            public int Cost { get; }
-            public int Score { get; }
             public Sprite Artwork { get; }
-            public Tile Tile { get; }
+            public string Name { get; }
+            public string Description { get; }
+            public Color Color { get; }
         }
     }
 }

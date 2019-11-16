@@ -13,20 +13,19 @@ public class CardDataEditor : Editor
 
         Space();
 
-        Label("Artwork Preview ");
-        GUILayout.FlexibleSpace();
-        MyTarget.Artwork = (Sprite) EditorGUILayout.ObjectField(MyTarget.Artwork, typeof(Sprite),
-            true,
-            GUILayout.Width(100),
-            GUILayout.Height(100));
-
-        Space();
-
-        if (GUILayout.Button("Clean Refs"))
-            CleanRefs();
+//        Label("Artwork Preview ");
+//        GUILayout.FlexibleSpace();
+//        MyTarget.Artwork = (Sprite) EditorGUILayout.ObjectField(MyTarget.Artwork, typeof(Sprite),
+//            true,
+//            GUILayout.Width(100),
+//            GUILayout.Height(100));
+//
+//        Space();
+//        if (GUILayout.Button("Clean Refs"))
+//            CleanRefs();
     }
 
-    void CleanRefs() => MyTarget.Artwork = null;
+//    void CleanRefs() => MyTarget.Artwork = null;
 
     void Space() => GUILayout.Space(25);
 

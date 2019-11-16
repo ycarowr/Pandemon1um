@@ -1,5 +1,6 @@
 ﻿using Extensions;
 using HexCardGame.SharedData;
+using TMPro;
 using Tools.Input.Mouse;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Tools.UI.Card
 
         #region Components
 
-        SpriteRenderer[] IUiCardComponents.Renderers => MyRenderers;
+        Renderer[] IUiCardComponents.Renderers => MyRenderers;
         SpriteRenderer IUiCardComponents.MyRenderer => MyRenderer;
         Collider2D IUiCardComponents.Collider => MyCollider;
         Rigidbody2D IUiCardComponents.Rigidbody => MyRigidbody;
@@ -30,7 +31,8 @@ namespace Tools.UI.Card
         #endregion
 
         #region Properties
-
+        
+        TextMeshPro DescriptionText { get; set; } 
         public string Name => gameObject.name;
         public UiCardParameters CardConfigsParameters => cardConfigsParameters;
         [SerializeField] SpriteRenderer artwork;
@@ -38,7 +40,7 @@ namespace Tools.UI.Card
         UiCardHandFsm Fsm { get; set; }
         Transform MyTransform { get; set; }
         Collider2D MyCollider { get; set; }
-        SpriteRenderer[] MyRenderers { get; set; }
+        Renderer[] MyRenderers { get; set; }
         SpriteRenderer MyRenderer { get; set; }
         Rigidbody2D MyRigidbody { get; set; }
         IMouseInput MyInput { get; set; }
@@ -93,7 +95,12 @@ namespace Tools.UI.Card
 
         public void Discard() => Fsm.Discard();
 
-        public void SetAndUpdateView(ICardData data) => artwork.sprite = data.Artwork;
+        public void SetAndUpdateView(ICardData data) => SetData(data);
+
+        void SetData(ICardData data)
+        {
+            DescriptionText.text = data.Description;
+        }
 
         #endregion
 
@@ -109,8 +116,9 @@ namespace Tools.UI.Card
             MyRigidbody = GetComponent<Rigidbody2D>();
             MyInput = GetComponent<IMouseInput>();
             HandSelector = transform.GetComponentInParent<UiCardHandSelector>();
-            MyRenderers = GetComponentsInChildren<SpriteRenderer>();
+            MyRenderers = GetComponentsInChildren<Renderer>();
             MyRenderer = GetComponent<SpriteRenderer>();
+            DescriptionText = GetComponentInChildren<TextMeshPro>();
 
             //transform
             Scale = new UiMotionScaleCard(this);

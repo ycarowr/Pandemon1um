@@ -53,8 +53,8 @@ namespace HexCardGame.UI
             var cardTransform = uiCard.transform;
             cardTransform.SetParent(CardHandSelector.transform);
             cardTransform.position = position;
-            uiCard.SetAndUpdateView(card.Data);
             uiCard.Initialize();
+            uiCard.SetAndUpdateView(card.Data);
             CardHandSelector.AddCard(uiCard);
             _registry.Add(uiCard, card);
         }

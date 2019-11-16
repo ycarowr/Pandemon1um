@@ -2,6 +2,11 @@
 {
     public enum CardId
     {
-        Test
+        Draw, 
+        Toss, 
+        Steal,
+        Pass,
+        Cancel,
+        End
     }
 }

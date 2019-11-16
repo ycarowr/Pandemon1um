@@ -12,7 +12,7 @@ namespace HexCardGame
         //----------------------------------------------------------------------------------------------------------
 
         public BoardData BoardData;
-        public PlayerDeck PlayerDeck;
+        public Library library;
         public static GameParameters Load() => Resources.Load<GameParameters>(Path);
 
         //----------------------------------------------------------------------------------------------------------

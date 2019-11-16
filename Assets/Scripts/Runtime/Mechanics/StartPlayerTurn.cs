@@ -27,8 +27,6 @@
 
             Game.IsTurnInProgress = true;
             Game.TurnLogic.UpdateCurrentPlayer();
-            var playerId = Game.TurnLogic.CurrentPlayerId;
-            Game.DrawCardFromLibrary(playerId);
             OnStartedCurrentPlayerTurn(Game.TurnLogic.CurrentPlayer);
         }
 

@@ -1,4 +1,5 @@
 ﻿using Tools.Patterns.StateMachine;
+using UnityEngine;
 
 namespace Tools.UI.Card
 {
@@ -77,9 +78,12 @@ namespace Tools.UI.Card
             MakeRenderNormal();
             foreach (var renderer in Handler.Renderers)
             {
-                var myColor = renderer.color;
-                myColor.a = Parameters.DisabledAlpha;
-                renderer.color = myColor;
+                if (renderer is SpriteRenderer)
+                {
+                    var myColor = renderer.sharedMaterial.color;
+                    myColor.a = Parameters.DisabledAlpha;
+                    renderer.sharedMaterial.color = myColor;
+                }
             }
         }
 
@@ -99,11 +103,11 @@ namespace Tools.UI.Card
         protected void RemoveAllTransparency()
         {
             foreach (var renderer in Handler.Renderers)
-                if (renderer)
+                if (renderer is SpriteRenderer)
                 {
-                    var myColor = renderer.color;
+                    var myColor = renderer.sharedMaterial.color;
                     myColor.a = 1;
-                    renderer.color = myColor;
+                    renderer.sharedMaterial.color = myColor;
                 }
         }
 

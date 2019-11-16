@@ -12,7 +12,7 @@ namespace Tools.UI.Card
         UiCardParameters CardConfigsParameters { get; }
         Camera MainCamera { get; }
         UiCardHandSelector HandSelector { get; }
-        SpriteRenderer[] Renderers { get; }
+        Renderer[] Renderers { get; }
         SpriteRenderer MyRenderer { get; }
         Collider2D Collider { get; }
         Rigidbody2D Rigidbody { get; }
