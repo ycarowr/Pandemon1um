@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340d871622354f14484f719e366a3e80, type: 3}
+  m_Name: GameParameters
+  m_EditorClassIdentifier: 
+  BoardData: {fileID: 11400000, guid: fa3e03dbfdd9a8f40a42b280e0ca624e, type: 2}
+  PlayerDeck: {fileID: 11400000, guid: 3d5744a1844122a4487e514fdd14b68c, type: 2}
+  Timers:
+    TimeUntilAiDoTurn: 2.5
+    TimeUntilAiFinishTurn: 3.5
+    TimeUntilFinishTurn: 6
+    TimeUntilFirstPlayer: 3
+    TimeUntilPreGameEvent: 0.01
+    TimeUntilStartGameEvent: 0.01
+    TimeUntilStartTurn: 0.01
+  Profiles:
+    AiPlayer:
+      id: 2
+      IsAi: 1
+    userId: 0
+    UserPlayer:
+      id: 0
+      IsAi: 0
+  Hand:
+    StartingHandCount: 3
+    MaxHandSize: 7

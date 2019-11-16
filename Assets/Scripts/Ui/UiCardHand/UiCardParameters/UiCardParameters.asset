@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728bc6d5be3dd554bb507ecbd9338553, type: 3}
+  m_Name: UiCardParameters
+  m_EditorClassIdentifier: 
+  uiCardSize: {fileID: 11400000, guid: b8bf0ecfb0b782c49896e36c90072496, type: 2}
+  disabledAlpha: 0.5
+  hoverHeight: 2.2
+  hoverRotation: 0
+  hoverScale: 1.45
+  hoverSpeed: 25
+  height: 0.04
+  spacing: -2.03
+  bentAngle: 16.8
+  rotationSpeed: 20
+  rotationSpeedP2: 500
+  movementSpeed: 11
+  scaleSpeed: 12
+  startSizeWhenDraw: 0.05
+  discardedSize: 0.5
