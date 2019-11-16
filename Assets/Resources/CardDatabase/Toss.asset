@@ -17,4 +17,4 @@ MonoBehaviour:
   description: 'An opponent
 
     discards 2 cards'
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0.24679601, g: 0.8867924, b: 0.8536409, a: 1}

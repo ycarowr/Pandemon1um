@@ -17,4 +17,4 @@ MonoBehaviour:
   description: 'Cancels a card''s effect
 
     (Cancel can cancel a Cancel)'
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0.7075472, g: 0.6574849, b: 0.6574849, a: 1}

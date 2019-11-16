@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 5
   nameCard: End
   description: Ends this round
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 1, g: 0.59740263, b: 0, a: 1}

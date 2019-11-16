@@ -42,6 +42,8 @@ namespace Tools.UI.Card
         Collider2D MyCollider { get; set; }
         Renderer[] MyRenderers { get; set; }
         SpriteRenderer MyRenderer { get; set; }
+        [SerializeField] SpriteRenderer background;
+        [SerializeField] TextMeshPro textName;
         Rigidbody2D MyRigidbody { get; set; }
         IMouseInput MyInput { get; set; }
         UiCardHandSelector HandSelector { get; set; }
@@ -100,6 +102,8 @@ namespace Tools.UI.Card
         void SetData(ICardData data)
         {
             DescriptionText.text = data.Description;
+            background.color = data.Color;
+            textName.text = data.Name;
         }
 
         #endregion
