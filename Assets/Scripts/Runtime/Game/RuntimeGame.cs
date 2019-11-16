@@ -1,7 +1,4 @@
 ﻿using System.Collections.Generic;
-using HexCardGame.Runtime.GameBoard;
-using HexCardGame.Runtime.GamePool;
-using HexCardGame.Runtime.GameScore;
 using HexCardGame.Runtime.GameTurn;
 using HexCardGame.SharedData;
 using Tools.Patterns.Observer;
@@ -36,16 +33,7 @@ namespace HexCardGame.Runtime.Game
                     new Hand(user.Id, args.GameParameters, Dispatcher),
                     new Hand(ai.Id, args.GameParameters, Dispatcher)
                 };
-
-                //Create Score
-                Score = new Score(Players, args.GameParameters, args.Dispatcher);
             }
-
-            //Create Board
-            Board = new Board<BoardElement>(args.GameParameters, Dispatcher);
-
-            //Create Pool
-            Pool = new Pool<CardPool>(args.GameParameters, Dispatcher);
 
             {
                 //Create Library
@@ -75,23 +63,17 @@ namespace HexCardGame.Runtime.Game
 
     public struct GameMechanics
     {
-        public HandPool HandPool { get; }
-        public HandBoard HandBoard { get; }
         public StartGame StartGame { get; }
         public FinishGame FinishGame { get; }
         public HandLibrary HandLibrary { get; }
-        public PoolLibrary PoolLibrary { get; }
         public PreStartGame PreStartGame { get; }
         public StartPlayerTurn StartPlayerTurn { get; }
         public FinishPlayerTurn FinishPlayerTurn { get; }
 
         public GameMechanics(IGame game)
         {
-            HandPool = new HandPool(game);
             StartGame = new StartGame(game);
-            HandBoard = new HandBoard(game);
             FinishGame = new FinishGame(game);
-            PoolLibrary = new PoolLibrary(game);
             HandLibrary = new HandLibrary(game);
             PreStartGame = new PreStartGame(game);
             StartPlayerTurn = new StartPlayerTurn(game);

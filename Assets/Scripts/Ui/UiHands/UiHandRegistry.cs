@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Game.Ui;
 using HexCardGame.Runtime;
-using HexCardGame.Runtime.GamePool;
 using Tools.UI.Card;
 using UnityEngine;
 
@@ -14,7 +13,6 @@ namespace HexCardGame.UI
         [SerializeField] GameObject cardPrefab;
         [SerializeField] PlayerId id;
         [SerializeField] Transform libraryPosition;
-        [SerializeField] UiPool uiPool;
         CardHand SelectedCard { get; set; }
         ObjectPooler Pooler => ObjectPooler.Instance;
         UiCardHandSelector CardHandSelector { get; set; }
@@ -36,13 +34,6 @@ namespace HexCardGame.UI
 
         public void CreateCardFromLibrary(CardHand cardHand) =>
             CreateUiCard(cardHand, libraryPosition.position);
-
-        public void CreateCardFromPool(CardHand cardHand, PositionId positionId)
-        {
-            var poolPosition = uiPool.GetPosition(positionId);
-            var poolWorldPosition = poolPosition.transform.position;
-            CreateUiCard(cardHand, poolWorldPosition);
-        }
 
         public void RemoveCard(CardHand cardHand)
         {
@@ -79,24 +70,6 @@ namespace HexCardGame.UI
                 _registry.Remove(removed);
 
             Pooler.Release(removed?.gameObject);
-        }
-
-        public void SelectBoardPosition(Vector3Int position)
-        {
-            if (SelectedCard == null)
-                return;
-
-            GameData.CurrentGameInstance.PlayElementAt(id, SelectedCard, position);
-            SelectedCard = null;
-        }
-
-        public void ReturnCardToPosition(PlayerId id, PositionId positionId)
-        {
-            if (SelectedCard == null)
-                return;
-
-            GameData.CurrentGameInstance.ReturnCardToPosition(this.id, SelectedCard, positionId);
-            SelectedCard = null;
         }
 
         void SelectCard(IUiCard uiCard) => SelectedCard = _registry[uiCard];

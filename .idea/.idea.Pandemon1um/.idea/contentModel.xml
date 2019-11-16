@@ -16,19 +16,6 @@
             <e p="LocalizationIds.cs" t="Include" />
           </e>
           <e p="Runtime" t="Include">
-            <e p="Board" t="Include">
-              <e p="Board.cs" t="Include" />
-              <e p="BoardDataStorage.cs" t="Include" />
-              <e p="BoardElement.cs" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="BoardStorageTests.cs" t="Include" />
-                <e p="BoardTests.cs" t="Include" />
-                <e p="MockBoardElement.cs" t="Include" />
-              </e>
-              <e p="IDataStorage.cs" t="Include" />
-              <e p="Position.cs" t="Include" />
-              <e p="VectorIntExtensions.cs" t="Include" />
-            </e>
             <e p="Card" t="Include">
               <e p="CardId.cs" t="Include" />
               <e p="ICard.cs" t="Include" />
@@ -73,7 +60,6 @@
                 <e p="BaseTestMechanics.cs" t="Include" />
                 <e p="FinishGame_Test.cs" t="Include" />
                 <e p="FinishPlayerTurn_Test.cs" t="Include" />
-                <e p="HandBoard_Test.cs" t="Include" />
                 <e p="Mechanics_Test.MockCardData.cs" t="Include" />
                 <e p="PreStartGame_Test.cs" t="Include" />
                 <e p="StartGame_Test.cs" t="Include" />
@@ -81,10 +67,7 @@
               </e>
               <e p="FinishGame.cs" t="Include" />
               <e p="FinishPlayerTurn.cs" t="Include" />
-              <e p="HandBoard.cs" t="Include" />
               <e p="HandLibrary.cs" t="Include" />
-              <e p="HandPool.cs" t="Include" />
-              <e p="PoolLibrary.cs" t="Include" />
               <e p="PreStartGame.cs" t="Include" />
               <e p="StartGame.cs" t="Include" />
               <e p="StartPlayerTurn.cs" t="Include" />
@@ -92,23 +75,6 @@
             <e p="Player" t="Include">
               <e p="Player.cs" t="Include" />
               <e p="PlayerId.cs" t="Include" />
-            </e>
-            <e p="Pool" t="Include">
-              <e p="CardPool.cs" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="PoolTests.cs" t="Include" />
-              </e>
-              <e p="IDataStorage.cs" t="Include" />
-              <e p="Pool.cs" t="Include" />
-              <e p="Pool.LockingLogic.cs" t="Include" />
-              <e p="Position.cs" t="Include" />
-              <e p="PositionId.cs" t="Include" />
-            </e>
-            <e p="Score" t="Include">
-              <e p="Editor" t="Include">
-                <e p="ScoreTest.cs" t="Include" />
-              </e>
-              <e p="Score.cs" t="Include" />
             </e>
             <e p="Tests" t="Include">
               <e p="Editor" t="Include">
@@ -158,15 +124,6 @@
               <e p="UiText.cs" t="Include" />
               <e p="UiTMP_TextListener.cs" t="Include" />
               <e p="UiUserInput.cs" t="Include" />
-            </e>
-            <e p="UiBoard" t="Include">
-              <e p="UiBoard.cs" t="Include" />
-              <e p="UiBoardDebug.cs" t="Include" />
-              <e p="UiBoardPositionSelector.cs" t="Include" />
-              <e p="UiTileMapInputHandler.cs" t="Include" />
-            </e>
-            <e p="UiBoardElements" t="Include">
-              <e p="UiBoardElements.cs" t="Include" />
             </e>
             <e p="UiCardHand" t="Include">
               <e p="Extensions" t="Include">
@@ -234,9 +191,6 @@
                 <e p="UiTexturePicker.cs" t="Include" />
               </e>
             </e>
-            <e p="UiCardPool" t="Include">
-              <e p="UiCardPool.cs" t="Include" />
-            </e>
             <e p="UiEndGame" t="Include">
               <e p="IUiEndGame.cs" t="Include" />
               <e p="UiButtonLose.cs" t="Include" />
@@ -265,7 +219,6 @@
               <e p="UiButtonCloseLibrary.cs" t="Include" />
               <e p="UiButtonDraw.cs" t="Include" />
               <e p="UiButtonPassTurn.cs" t="Include" />
-              <e p="UiButtonReveal.cs" t="Include" />
               <e p="UiFinishUserTurn.cs" t="Include" />
               <e p="UiLibraryMenu.cs" t="Include" />
               <e p="UiPlayer.cs" t="Include" />
@@ -276,23 +229,6 @@
               <e p="UiTextPassTurn.cs" t="Include" />
               <e p="UiUser.cs" t="Include" />
               <e p="UiUserHudButtons.cs" t="Include" />
-            </e>
-            <e p="UiPool" t="Include">
-              <e p="UiPool.cs" t="Include" />
-              <e p="UiPoolDebug.cs" t="Include" />
-              <e p="UiPoolEventHandler.cs" t="Include" />
-              <e p="UiPoolParameters.cs" t="Include" />
-              <e p="UiPoolPosition.cs" t="Include" />
-              <e p="UiPoolPositionDebug.cs" t="Include" />
-              <e p="UiPoolPositioning.cs" t="Include" />
-              <e p="UiPoolPositionPickSelector.cs" t="Include" />
-              <e p="UiPoolPositionReturnSelector.cs" t="Include" />
-              <e p="UiPoolPositionsLocker.cs" t="Include" />
-              <e p="UiPoolReturnCardSelector.cs" t="Include" />
-              <e p="UiPoolSort.cs" t="Include" />
-            </e>
-            <e p="UiScore" t="Include">
-              <e p="UiScore.cs" t="Include" />
             </e>
           </e>
         </e>

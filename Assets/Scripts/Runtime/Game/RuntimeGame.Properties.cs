@@ -1,7 +1,4 @@
-﻿using HexCardGame.Runtime.GameBoard;
-using HexCardGame.Runtime.GamePool;
-using HexCardGame.Runtime.GameScore;
-using HexCardGame.Runtime.GameTurn;
+﻿using HexCardGame.Runtime.GameTurn;
 using Tools.Patterns.Observer;
 
 namespace HexCardGame.Runtime.Game
@@ -20,13 +17,10 @@ namespace HexCardGame.Runtime.Game
 
         #region Game Data Structures
 
-        public IBoard<BoardElement> Board { get; private set; }
-        public IPool<CardPool> Pool { get; private set; }
         public ILibrary Library { get; private set; }
         public IPlayer[] Players { get; private set; }
         public IHand[] Hands { get; private set; }
-        public IScore Score { get; private set; }
-
+        
         #endregion
 
         #region Turn Mechanics

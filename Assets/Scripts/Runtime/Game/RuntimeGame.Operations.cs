@@ -1,5 +1,4 @@
-﻿using HexCardGame.Runtime.GamePool;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace HexCardGame.Runtime.Game
 {
@@ -12,21 +11,6 @@ namespace HexCardGame.Runtime.Game
         public void StartPlayerTurn() => GameMechanics.StartPlayerTurn.Execute();
         public void FinishPlayerTurn() => GameMechanics.FinishPlayerTurn.Execute();
         public void DrawCardFromLibrary(PlayerId playerId) => GameMechanics.HandLibrary.DrawCard(playerId);
-
-        public void RevealCardHigherPosition(PlayerId playerId) =>
-            GameMechanics.PoolLibrary.RevealCardHigherPosition(playerId);
-
-        public void RevealCardFromLibrary(PlayerId playerId, PositionId positionId)
-            => GameMechanics.PoolLibrary.RevealCard(playerId, positionId);
-
-        public void PlayElementAt(PlayerId playerId, CardHand card, Vector3Int position)
-            => GameMechanics.HandBoard.CreateBoardElementAt(playerId, card, position);
-
-        public void PickCardFromPosition(PlayerId playerId, PositionId positionId) =>
-            GameMechanics.HandPool.PickCard(playerId, positionId);
-
-        public void ReturnCardToPosition(PlayerId playerId, CardHand cardHand, PositionId positionId) =>
-            GameMechanics.HandPool.ReturnCard(playerId, cardHand, positionId);
 
         public void ExecuteAiTurn(PlayerId id)
         {

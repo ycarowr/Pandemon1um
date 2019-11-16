@@ -1,7 +1,4 @@
-﻿using HexCardGame.Runtime.GameBoard;
-using HexCardGame.Runtime.GamePool;
-using HexCardGame.Runtime.GameScore;
-using HexCardGame.Runtime.GameTurn;
+﻿using HexCardGame.Runtime.GameTurn;
 using Tools.Patterns.Observer;
 using UnityEngine;
 
@@ -26,23 +23,14 @@ namespace HexCardGame.Runtime.Game
         IDispatcher Dispatcher { get; }
         bool IsGameStarted { get; set; }
         bool IsGameFinished { get; set; }
-
-        IScore Score { get; }
         IHand[] Hands { get; }
         ILibrary Library { get; }
-        IPool<CardPool> Pool { get; }
-        IBoard<BoardElement> Board { get; }
         void ExecuteAiTurn(PlayerId id);
         void ForceWin(PlayerId id);
     }
 
     public interface ICardGame
     {
-        void RevealCardHigherPosition(PlayerId playerId);
-        void RevealCardFromLibrary(PlayerId playerId, PositionId positionId);
         void DrawCardFromLibrary(PlayerId playerId);
-        void PickCardFromPosition(PlayerId playerId, PositionId positionId);
-        void ReturnCardToPosition(PlayerId playerId, CardHand cardHand, PositionId positionId);
-        void PlayElementAt(PlayerId playerId, CardHand card, Vector3Int position);
     }
 }

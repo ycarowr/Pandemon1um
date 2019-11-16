@@ -3,8 +3,7 @@ using UnityEngine;
 
 namespace HexCardGame.UI
 {
-    public class UiLibraryMenu : UiEventListener, UiButtonReveal.IPressReveal, UiButtonDraw.IPressDraw,
-        UiButtonCloseLibrary.IPressCloseLibrary
+    public class UiLibraryMenu : UiEventListener, UiButtonDraw.IPressDraw, UiButtonCloseLibrary.IPressCloseLibrary
     {
         [SerializeField] GameObject buttonClose;
         [SerializeField] GameObject content;
@@ -14,12 +13,6 @@ namespace HexCardGame.UI
         void UiButtonDraw.IPressDraw.Draw()
         {
             GameData.CurrentGameInstance.DrawCardFromLibrary(PlayerId.User);
-            Hide();
-        }
-
-        void UiButtonReveal.IPressReveal.Reveal()
-        {
-            GameData.CurrentGameInstance.RevealCardHigherPosition(PlayerId.User);
             Hide();
         }
 
