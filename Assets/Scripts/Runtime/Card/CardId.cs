@@ -2,8 +2,8 @@
 {
     public enum CardId
     {
-        Draw, 
-        Toss, 
+        Draw,
+        Toss,
         Steal,
         Pass,
         Cancel,

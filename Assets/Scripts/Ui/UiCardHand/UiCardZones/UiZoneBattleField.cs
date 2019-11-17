@@ -1,6 +1,4 @@
-﻿using HexCardGame.UI;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine.EventSystems;
 
 namespace Tools.UI.Card
 {

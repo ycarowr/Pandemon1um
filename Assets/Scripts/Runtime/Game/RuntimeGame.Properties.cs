@@ -18,9 +18,10 @@ namespace HexCardGame.Runtime.Game
         #region Game Data Structures
 
         public ILibrary Library { get; private set; }
+        public IGraveyard Graveyard { get; private set; }
         public IPlayer[] Players { get; private set; }
         public IHand[] Hands { get; private set; }
-        
+
         #endregion
 
         #region Turn Mechanics

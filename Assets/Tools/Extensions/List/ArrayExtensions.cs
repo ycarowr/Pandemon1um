@@ -5,7 +5,6 @@ using Random = UnityEngine.Random;
 
 namespace Tools.Extensions.Arrays
 {
-    /// </summary>
     public static class ArrayExtensions
     {
         /// <summary>

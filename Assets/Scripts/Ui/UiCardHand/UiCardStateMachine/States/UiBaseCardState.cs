@@ -77,14 +77,12 @@ namespace Tools.UI.Card
             Handler.Rigidbody.Sleep();
             MakeRenderNormal();
             foreach (var renderer in Handler.Renderers)
-            {
                 if (renderer is SpriteRenderer)
                 {
                     var myColor = renderer.sharedMaterial.color;
                     myColor.a = Parameters.DisabledAlpha;
                     renderer.sharedMaterial.color = myColor;
                 }
-            }
         }
 
         /// <summary>

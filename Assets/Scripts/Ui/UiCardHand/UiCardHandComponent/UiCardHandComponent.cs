@@ -31,8 +31,8 @@ namespace Tools.UI.Card
         #endregion
 
         #region Properties
-        
-        TextMeshPro DescriptionText { get; set; } 
+
+        TextMeshPro DescriptionText { get; set; }
         public string Name => gameObject.name;
         public UiCardParameters CardConfigsParameters => cardConfigsParameters;
         [SerializeField] SpriteRenderer artwork;

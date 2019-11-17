@@ -32,10 +32,10 @@ namespace HexCardGame.Runtime.Test
         [Test]
         public void AddCard_Test()
         {
-            var countBefore = _hand.Size();
+            var countBefore = _hand.Length;
             var card = GetTestCard();
             _hand.Add(card);
-            var countAfter = _hand.Size();
+            var countAfter = _hand.Length;
             Assert.IsTrue(countBefore + 1 == countAfter);
         }
 

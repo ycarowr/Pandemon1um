@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace HexCardGame.Runtime.Game
+﻿namespace HexCardGame.Runtime.Game
 {
     public partial class RuntimeGame
     {

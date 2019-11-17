@@ -1,6 +1,5 @@
 ﻿using Game.Ui;
 using HexCardGame;
-using HexCardGame.UI;
 using Tools.Input.Mouse;
 using UnityEngine;
 using UnityEngine.EventSystems;

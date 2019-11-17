@@ -17,20 +17,21 @@ namespace HexCardGame.UI
 
             Registry.CreateCardFromLibrary(cardHand);
         }
+
+        void IPlayCard.OnPlayCard(PlayerId id, CardHand cardHand)
+        {
+            if (IsMyEvent(id))
+                Registry.RemoveUiCard(cardHand);
+        }
+
         void IRestartGame.OnRestart() => Registry.Clear();
-        
+
         bool IsMyEvent(PlayerId id) => Registry.Id == id;
 
         protected override void Awake()
         {
             base.Awake();
             Registry = GetComponent<UiHandRegistry>();
-        }
-
-        void IPlayCard.OnPlayCard(PlayerId id, CardHand cardHand)
-        {
-            if(IsMyEvent(id))
-                Registry.RemoveUiCard(cardHand);
         }
     }
 }

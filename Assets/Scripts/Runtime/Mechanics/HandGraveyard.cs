@@ -21,7 +21,10 @@
             var playerHand = GetPlayerHand(playerId);
             if (!playerHand.Has(cardHand))
                 return;
-            
+
+            playerHand.Remove(cardHand);
+            Game.Graveyard.AddCard(cardHand);
+            //Dispatch Effect
             OnPlayCard(playerId, cardHand);
         }
 

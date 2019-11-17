@@ -1,5 +1,4 @@
-﻿using HexCardGame.SharedData;
-using Tools.Patterns.Observer;
+﻿using Tools.Patterns.Observer;
 using Tools.Patterns.StateMachine;
 using UnityEngine;
 

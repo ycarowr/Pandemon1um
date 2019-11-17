@@ -32,7 +32,7 @@ namespace HexCardGame.UI
 
         public void CreateCardFromLibrary(CardHand cardHand) =>
             CreateUiCard(cardHand, libraryPosition.position);
-        
+
         public void Clear() => _registry.Clear();
 
         void CreateUiCard(CardHand card, Vector3 position)

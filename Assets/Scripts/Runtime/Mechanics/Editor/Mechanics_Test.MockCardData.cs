@@ -1,6 +1,5 @@
 ﻿using HexCardGame.SharedData;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace HexCardGame.Runtime.Test
 {
@@ -8,8 +7,8 @@ namespace HexCardGame.Runtime.Test
     {
         public class MockCardData : ICardData
         {
-            public CardId Id { get; }
             public Sprite Artwork { get; }
+            public CardId Id { get; }
             public string Name { get; }
             public string Description { get; }
             public Color Color { get; }

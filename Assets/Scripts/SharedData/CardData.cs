@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace HexCardGame.SharedData
 {
@@ -14,11 +13,11 @@ namespace HexCardGame.SharedData
     [CreateAssetMenu(menuName = "Data/Card")]
     public class CardData : ScriptableObject, ICardData
     {
+        [SerializeField] Color color = Color.white;
+        [SerializeField, Multiline] string description;
         [SerializeField] CardId id;
         [SerializeField] string nameCard;
-        [SerializeField, Multiline] string description;
-        [SerializeField] Color color = Color.white;
- 
+
         // -------------------------------------------------------------------------------------------------------------
 
         public CardId Id => id;

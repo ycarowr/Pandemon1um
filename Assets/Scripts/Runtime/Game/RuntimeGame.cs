@@ -25,10 +25,10 @@ namespace HexCardGame.Runtime.Game
                 var aiId = args.GameParameters.Profiles.AiPlayer.id;
                 var user = new Player(userId, args.GameParameters, args.Dispatcher);
                 var ai = new Player(aiId, args.GameParameters, args.Dispatcher);
-                Players = new[] {user, ai};
+                Players = new IPlayer[] {user, ai};
 
                 //Create Hands
-                Hands = new[]
+                Hands = new IHand[]
                 {
                     new Hand(user.Id, args.GameParameters, Dispatcher),
                     new Hand(ai.Id, args.GameParameters, Dispatcher)
@@ -45,6 +45,8 @@ namespace HexCardGame.Runtime.Game
 
                 Library = new Library(libData, Dispatcher);
             }
+
+            Graveyard = new Graveyard(Dispatcher);
         }
 
         void InitializeTurnBasedStructures(GameArgs args)

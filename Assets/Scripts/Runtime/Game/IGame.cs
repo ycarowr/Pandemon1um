@@ -1,6 +1,5 @@
 ﻿using HexCardGame.Runtime.GameTurn;
 using Tools.Patterns.Observer;
-using UnityEngine;
 
 namespace HexCardGame.Runtime.Game
 {
@@ -21,12 +20,13 @@ namespace HexCardGame.Runtime.Game
     {
         GameParameters Parameters { get; }
         IDispatcher Dispatcher { get; }
-        bool IsGameStarted { get; set; }
-        bool IsGameFinished { get; set; }
         IHand[] Hands { get; }
         ILibrary Library { get; }
-        void ExecuteAiTurn(PlayerId id);
+        IGraveyard Graveyard { get; }
+        bool IsGameStarted { get; set; }
+        bool IsGameFinished { get; set; }
         void ForceWin(PlayerId id);
+        void ExecuteAiTurn(PlayerId id);
     }
 
     public interface ICardGame
