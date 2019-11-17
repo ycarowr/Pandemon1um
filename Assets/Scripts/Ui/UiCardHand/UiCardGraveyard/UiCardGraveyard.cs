@@ -15,18 +15,15 @@ namespace Tools.UI.Card
 
         //--------------------------------------------------------------------------------------------------------------
 
-        UiCardHandSelector CardHandSelector { get; set; }
-
-
-        //--------------------------------------------------------------------------------------------------------------
-
+        [SerializeField] UiCardHandSelector[] cardHandSelectors;
+        
         #region Unitycallbacks
 
         protected override void Awake()
         {
             base.Awake();
-            CardHandSelector = transform.parent.GetComponentInChildren<UiCardHandSelector>();
-            CardHandSelector.OnCardPlayed += AddCard;
+            foreach (var i in cardHandSelectors)
+                i.OnCardPlayed += AddCard;
         }
 
         #endregion

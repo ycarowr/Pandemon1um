@@ -29,9 +29,10 @@ namespace HexCardGame.Runtime
 
         IDispatcher Dispatcher { get; }
         public int Size => _register.Length;
-        public void AddCard(CardHand cardHand) => _register.Add(cardHand);
         public CardHand[] GetCards() => _register.GetArray();
         public void Clear() => _register.Clear();
+        public void AddCard(CardHand cardHand) => _register.Add(cardHand);
+
         void OnCreateGraveyard() => Dispatcher.Notify<ICreateGraveyard>(i => i.OnCreateGraveyard(this));
     }
 }

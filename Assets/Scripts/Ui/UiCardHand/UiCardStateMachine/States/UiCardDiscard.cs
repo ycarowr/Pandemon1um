@@ -21,7 +21,7 @@ namespace Tools.UI.Card
 
         public override void OnEnterState()
         {
-            Disable();
+//            Disable();
             SetScale();
             SetRotation();
         }

@@ -57,7 +57,7 @@ namespace HexCardGame.UI
             if (removed != null)
                 _registry.Remove(removed);
 
-            Pooler.Release(removed?.gameObject);
+//            Pooler.Release(removed?.gameObject);
         }
     }
 }

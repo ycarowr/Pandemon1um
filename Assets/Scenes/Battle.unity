@@ -120,6 +120,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &510920081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3670158220292412448, guid: ad164a00d0a10304aacefe40d867ac9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5479066457627506575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577684f24150cc4b9f493b4b9942f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1869152751 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8038468258090155770, guid: ad164a00d0a10304aacefe40d867ac9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5479066457627506575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e577684f24150cc4b9f493b4b9942f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &117777948941175405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189,6 +213,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9905ece618222d94f9217534cd6dea6e, type: 3}
+--- !u!1001 &1749571523134144739
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1749571522266686473, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_Name
+      value: UiGraveyard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686478, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749571522266686479, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: cardHandSelectors.Array.data[0]
+      value: 
+      objectReference: {fileID: 510920081}
+    - target: {fileID: 1749571522266686479, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: cardHandSelectors.Array.data[1]
+      value: 
+      objectReference: {fileID: 1869152751}
+    - target: {fileID: 8908188343470697596, guid: f8b31cda8d6a5cd4f83883af83252328,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8b31cda8d6a5cd4f83883af83252328, type: 3}
 --- !u!1001 &2156035524673360644
 PrefabInstance:
   m_ObjectHideFlags: 0

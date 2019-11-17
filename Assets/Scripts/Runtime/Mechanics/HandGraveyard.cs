@@ -5,6 +5,12 @@
     {
         void OnPlayCard(PlayerId id, CardHand cardHand);
     }
+ 
+    [Event]
+    public interface IDiscardCard
+    {
+        void OnDiscardCard(CardHand cardHand);
+    }
 
     public class HandGraveyard : BaseGameMechanics
     {
@@ -24,12 +30,15 @@
 
             playerHand.Remove(cardHand);
             Game.Graveyard.AddCard(cardHand);
-            //Dispatch Effect
             OnPlayCard(playerId, cardHand);
+            OnDiscardCard(cardHand);
         }
 
         void OnPlayCard(PlayerId playerId, CardHand card) =>
             Dispatcher.Notify<IPlayCard>(i => i.OnPlayCard(playerId, card));
+
+        void OnDiscardCard(CardHand cardHand) => 
+            Dispatcher.Notify<IDiscardCard>(i => i.OnDiscardCard(cardHand));
 
         IHand GetPlayerHand(PlayerId id)
         {
