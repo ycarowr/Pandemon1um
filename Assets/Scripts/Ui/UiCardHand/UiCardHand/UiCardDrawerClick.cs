@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 namespace Tools.UI.Card
 {
     [RequireComponent(typeof(IMouseInput))]
-    public class UiCardDrawerClick : UiGameDataAccess
+    public class UiCardDrawerClick : UiGameDataRequester
     {
         IMouseInput Input { get; set; }
 
@@ -19,6 +19,6 @@ namespace Tools.UI.Card
             Input.OnPointerClick += DrawCard;
         }
 
-        void DrawCard(PointerEventData obj) => GameData.CurrentGameInstance.DrawCardFromLibrary(PlayerId.User);
+        void DrawCard(PointerEventData obj) => GameData.CurrentGameInstance.DrawCard(PlayerId.User);
     }
 }

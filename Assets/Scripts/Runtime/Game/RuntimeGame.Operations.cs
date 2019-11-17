@@ -10,7 +10,10 @@ namespace HexCardGame.Runtime.Game
         public void PreStartGame() => GameMechanics.PreStartGame.Execute();
         public void StartPlayerTurn() => GameMechanics.StartPlayerTurn.Execute();
         public void FinishPlayerTurn() => GameMechanics.FinishPlayerTurn.Execute();
-        public void DrawCardFromLibrary(PlayerId playerId) => GameMechanics.HandLibrary.DrawCard(playerId);
+        public void DrawCard(PlayerId playerId) => GameMechanics.HandLibrary.DrawCard(playerId);
+
+        public void PlayCard(PlayerId playerId, CardHand cardHand) =>
+            GameMechanics.HandGraveyard.PlayCard(playerId, cardHand);
 
         public void ExecuteAiTurn(PlayerId id)
         {

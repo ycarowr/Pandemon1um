@@ -1,5 +1,6 @@
 ﻿using HexCardGame.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Tools.UI.Card
 {
@@ -8,6 +9,6 @@ namespace Tools.UI.Card
     /// </summary>
     public class UiZoneBattleField : UiBaseDropZone
     {
-        public void OnSelectBoardPosition(Vector3Int position) => CardHandSelector?.PlaySelected();
+        protected override void OnPointerUp(PointerEventData eventData) => CardHandSelector?.PlaySelected();
     }
 }

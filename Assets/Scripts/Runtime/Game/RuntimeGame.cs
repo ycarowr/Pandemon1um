@@ -67,6 +67,7 @@ namespace HexCardGame.Runtime.Game
         public FinishGame FinishGame { get; }
         public HandLibrary HandLibrary { get; }
         public PreStartGame PreStartGame { get; }
+        public HandGraveyard HandGraveyard { get; }
         public StartPlayerTurn StartPlayerTurn { get; }
         public FinishPlayerTurn FinishPlayerTurn { get; }
 
@@ -76,6 +77,7 @@ namespace HexCardGame.Runtime.Game
             FinishGame = new FinishGame(game);
             HandLibrary = new HandLibrary(game);
             PreStartGame = new PreStartGame(game);
+            HandGraveyard = new HandGraveyard(game);
             StartPlayerTurn = new StartPlayerTurn(game);
             FinishPlayerTurn = new FinishPlayerTurn(game);
         }

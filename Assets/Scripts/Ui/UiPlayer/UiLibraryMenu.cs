@@ -12,7 +12,7 @@ namespace HexCardGame.UI
 
         void UiButtonDraw.IPressDraw.Draw()
         {
-            GameData.CurrentGameInstance.DrawCardFromLibrary(PlayerId.User);
+            GameData.CurrentGameInstance.DrawCard(PlayerId.User);
             Hide();
         }
 

@@ -31,6 +31,7 @@ namespace HexCardGame.Runtime.Game
 
     public interface ICardGame
     {
-        void DrawCardFromLibrary(PlayerId playerId);
+        void DrawCard(PlayerId playerId);
+        void PlayCard(PlayerId playerId, CardHand cardHand);
     }
 }

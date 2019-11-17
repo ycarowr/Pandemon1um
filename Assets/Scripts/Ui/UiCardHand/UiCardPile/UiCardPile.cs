@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Game.Ui;
+using HexCardGame.UI;
 
 namespace Tools.UI.Card
 {
@@ -91,7 +92,7 @@ namespace Tools.UI.Card
         {
             var childCards = GetComponentsInChildren<IUiCard>();
             foreach (var uiCardHand in childCards)
-                Destroy(uiCardHand.gameObject);
+                ObjectPooler.Instance.Release(uiCardHand.gameObject);
 
             Cards.Clear();
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using HexCardGame;
+using UnityEngine;
 
 namespace Tools.UI.Card
 {
@@ -46,7 +47,6 @@ namespace Tools.UI.Card
         /// <summary>
         ///     Play the card which is currently selected. Nothing happens if current is null.
         /// </summary>
-        /// <param name="card"></param>
         public void PlaySelected()
         {
             if (SelectedCard == null)
@@ -63,7 +63,7 @@ namespace Tools.UI.Card
         {
             if (card == null)
                 throw new ArgumentNullException("Null is not a valid argument.");
-
+            
             SelectedCard = null;
             RemoveCard(card);
             OnCardPlayed?.Invoke(card);

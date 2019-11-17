@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using HexCardGame.SharedData;
 using Tools.Extensions.Arrays;
 using Tools.Patterns.Observer;
@@ -18,6 +19,7 @@ namespace HexCardGame.Runtime
         CardData GetRandomDataFromPlayer(PlayerId id);
     }
 
+    [StructLayout(LayoutKind.Sequential)]
     public class Library : ILibrary
     {
         readonly CardData[] _register;

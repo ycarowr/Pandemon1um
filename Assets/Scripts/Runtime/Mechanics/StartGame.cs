@@ -32,7 +32,7 @@
         {
             foreach (var player in Game.TurnLogic.Players)
                 for (var i = 0; i < Parameters.Hand.StartingHandCount; i++)
-                    Game.DrawCardFromLibrary(player.Id);
+                    Game.DrawCard(player.Id);
         }
 
         void OnGameStarted(IPlayer starterPlayer) => Dispatcher.Notify<IStartGame>(i => i.OnStartGame(starterPlayer));

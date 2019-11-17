@@ -109,6 +109,9 @@ namespace Tools.Patterns.GenericPrefabPooler
 
         public virtual void Release(GameObject pooledObj)
         {
+            if (pooledObj == null)
+                return;
+            
             if (free == null)
                 Debug.LogError("Nop! PoolAble objects list is not created yet!");
 

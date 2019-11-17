@@ -6,7 +6,7 @@ using UnityEngine;
 namespace HexCardGame.UI
 {
     [RequireComponent(typeof(UiHandRegistry))]
-    public class UiHandEventHandler : UiEventListener, IDrawCard, IRestartGame
+    public class UiHandEventHandler : UiEventListener, IDrawCard, IRestartGame, IPlayCard
     {
         UiHandRegistry Registry { get; set; }
 
@@ -25,6 +25,12 @@ namespace HexCardGame.UI
         {
             base.Awake();
             Registry = GetComponent<UiHandRegistry>();
+        }
+
+        void IPlayCard.OnPlayCard(PlayerId id, CardHand cardHand)
+        {
+            if(IsMyEvent(id))
+                Registry.RemoveUiCard(cardHand);
         }
     }
 }

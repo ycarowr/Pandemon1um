@@ -13,7 +13,6 @@ namespace HexCardGame.UI
         [SerializeField] GameObject cardPrefab;
         [SerializeField] PlayerId id;
         [SerializeField] Transform libraryPosition;
-        CardHand SelectedCard { get; set; }
         ObjectPooler Pooler => ObjectPooler.Instance;
         UiCardHandSelector CardHandSelector { get; set; }
         public PlayerId Id => id;
@@ -22,30 +21,19 @@ namespace HexCardGame.UI
         {
             base.Awake();
             CardHandSelector = GetComponent<UiCardHandSelector>();
-            CardHandSelector.OnCardSelected += SelectCard;
-            CardHandSelector.OnCardUnSelect += Unselect;
+            CardHandSelector.OnCardPlayed += RequestPlayCard;
         }
 
-        void OnDestroy()
+        void RequestPlayCard(IUiCard uiCardPlayed)
         {
-            CardHandSelector.OnCardSelected -= SelectCard;
-            CardHandSelector.OnCardUnSelect -= Unselect;
+            var cardHand = _registry[uiCardPlayed];
+            GameData.CurrentGameInstance.PlayCard(PlayerId.User, cardHand);
         }
 
         public void CreateCardFromLibrary(CardHand cardHand) =>
             CreateUiCard(cardHand, libraryPosition.position);
-
-        public void RemoveCard(CardHand cardHand)
-        {
-            CardHandSelector.PlaySelected();
-            RemoveUiCard(cardHand);
-        }
-
-        public void Clear()
-        {
-            _registry.Clear();
-            SelectedCard = null;
-        }
+        
+        public void Clear() => _registry.Clear();
 
         void CreateUiCard(CardHand card, Vector3 position)
         {
@@ -71,9 +59,5 @@ namespace HexCardGame.UI
 
             Pooler.Release(removed?.gameObject);
         }
-
-        void SelectCard(IUiCard uiCard) => SelectedCard = _registry[uiCard];
-
-        void Unselect() => SelectedCard = null;
     }
 }
